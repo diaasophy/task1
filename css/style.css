@@ -1,0 +1,332 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: aqua;
+
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*  start @media */
+/* small */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medim */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* larg */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/*  end @media */
+/* start global style */
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none    ;
+}
+.heding{
+    letter-spacing: -3px;
+    text-align: center;
+    color: rgb(196, 196, 197);
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0;
+
+}
+@media (max-width:768){
+    .heding{
+        font-size: 60px;
+    }
+    .heding + p{
+        margin-top: 20px;
+    }
+}
+.heding + p{
+    color: rgba(85, 84, 83, 0.76);
+    text-align: center;
+    margin-top: -30px;
+}
+/* end global style */
+/* start header */
+.header{
+    position: relative;
+    padding-top: 5px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+}
+.header .container .logo{
+    width: 40px;
+    padding-bottom: 5px;
+    
+}
+.header .linkes{
+    position: relative;
+}
+.header .linkes:hover .icon span:nth-child(2){
+    width: 100%;
+}
+.header  .linkes .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header  .linkes .icon span{
+    background-color:rgb(20, 20, 20);
+    margin-bottom: 5px;
+    
+}
+.header  .linkes .icon span:first-child{
+    height: 2px;
+    width: 100%;
+
+}
+.header  .linkes .icon span:nth-child(2){
+    height: 2px;
+    width: 50%;
+    transition: 0.3s;
+}
+.header  .linkes .icon span:last-child{
+    height: 2px;
+    width: 100%;
+}
+.header  .linkes ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    background-color: rgb(203, 205, 207);
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+}
+.header  .linkes:hover ul {
+    display: block;
+}
+.header  .linkes ul::before{
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(203, 205, 207) transparent;
+    right: 0;
+    top: -20px;
+}
+.header  .linkes ul li a{
+    padding: 10px;
+    display: block;
+    color: rgb(138, 139, 139);
+    transition: 0.3s;
+}
+.header  .linkes ul li a:hover{
+    padding-left: 25px;
+}
+.header  .linkes ul li:not(:last-child) a{
+    border-bottom: 2px solid rgb(161, 159, 159);
+}
+    /* end header */
+    /* start navbar */
+.navbar{
+    background-image: url(../img/10.webp);
+    height: calc(100vh - 64px);
+    background-size: cover;
+}
+.navbar .nav{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.navbar .nav h1{
+    color: var(--main-color);
+    font-size: 50px;
+}
+.navbar .nav p{
+    font-size: 15px;
+}
+    /* end navbar */
+    /* start feature */
+ .feature{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+ }  
+ .feature .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap:20px ;
+    text-align: center;
+    padding-top: 15px;
+
+ }
+ .feature .feat i{
+    color: var(--main-color);
+ }
+.feature .feat p{
+    color: rgb(113, 114, 116);
+    font-size: 15px;
+}
+    /* end feature */
+    /* start services */
+.serveses .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px   ;
+}
+.serveses .content .srv{
+    display: flex;
+    margin-bottom: 30px;
+}
+@media (max-width:768px){
+    .serveses .content .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.serveses .content .srv i{
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+.serveses .content .srv .text{
+    flex: 1;
+}
+.serveses .content .srv .text  h3{
+    margin: 0 0 20px;
+}
+.serveses .content .srv .text  p{
+    color: rgb(136, 138, 139);
+    font-weight: 300;
+    line-height: 1.6;
+}
+.serveses .content .imdg{
+    position: relative;
+    text-align: center;
+}
+.serveses .content .imdg img{
+    width: 260px;
+}
+.serveses .content .imdg::before{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    width: 100px;
+    height: calc(100% + 100px );
+    top: -50px;
+    right: 0;
+    z-index: -1;
+}
+@media (max-width:1199px){
+    .img-colam{
+        display: none;
+    }
+}
+    /* end services */
+    /* start protfolio */
+.protfolio{
+    background-color: #eee;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.protfolio .prot{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap:30px;
+    margin-top: 80px;
+}
+.protfolio .prot img{
+    width: 100%;
+}
+.protfolio .prot .part{
+    background-color: white;
+}
+.protfolio .prot .part h3{
+    padding-left: 15px;
+    font-size: 20px;
+
+}
+.protfolio .prot .part p{
+    padding-left: 15px;
+    color: rgb(114, 113, 113);
+    line-height: 1.2;
+    font-size: 20px;
+}
+    /* end protfolio */
+    /* start abuot */
+.abuot{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}  
+.abuot .abuot-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+
+}
+.abuot .abuot-2 .card{
+    position: relative;
+    width: 45%;
+    padding-right: 40px;
+
+
+}
+.abuot .abuot-2 .card::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: calc(100% + 80px);
+    background-color: rgb(223, 221, 221);
+    top: -40px;
+    left: -10px;
+    z-index: -1
+}
+.abuot .abuot-2 .card::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    top: -25px;
+    left: 205px;
+    z-index: -1;
+}
+.abuot .abuot-2 .pargrph{
+    width: 55%;
+
+}
+.abuot .abuot-2 .pargrph .nth{
+    color: rgb(102, 102, 102);
+}
+.abuot .abuot-2 .pargrph hr{
+    width: 50%;
+    border-color: var(--main-color);
+
+}
+    /* end abuot */
